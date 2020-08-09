@@ -1,0 +1,11 @@
+a.out: poly_main.o poly_SPheap_impl.o impl.o
+	gcc poly_main.o poly_SPheap_impl.o impl.o 
+
+poly_main.o: poly_main.c poly_header.h header.h
+	gcc -c poly_main.c
+
+poly_SPheap_impl.o: poly_SPheap_impl.c poly_header.h header.h
+	gcc -c poly_SPheap_impl.c
+	
+impl.o: impl.c header.h
+	gcc -c impl.c

@@ -1,0 +1,8 @@
+a.out: sim_exp.o impl.o
+	gcc sim_exp.o impl.o
+
+sim_exp.o: sim_exp.c header.h
+	gcc -c sim_exp.c
+
+impl.o: impl.c header.h
+	gcc -c impl.c

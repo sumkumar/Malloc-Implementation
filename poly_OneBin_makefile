@@ -1,0 +1,11 @@
+a.out: poly_main.o poly_OneBin_impl.o impl.o
+	gcc poly_main.o poly_OneBin_impl.o impl.o 
+
+poly_main.o: poly_main.c poly_header.h header.h
+	gcc -c poly_main.c
+
+poly_OneBin_impl.o: poly_OneBin_impl.c poly_header.h header.h
+	gcc -c poly_OneBin_impl.c
+	
+impl.o: impl.c header.h
+	gcc -c impl.c
